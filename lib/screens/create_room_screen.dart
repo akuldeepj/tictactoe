@@ -62,7 +62,9 @@ class _CreateRoomScreenState extends State<CreateRoomScreen> {
             ),
             SizedBox(height: size.height * 0.08),
             CustomTextField(
-                labelText: "Enter nickname", controller: _nameController),
+                labelText: "Enter nickname", controller: _nameController,
+                //bind enter key to create room
+                ),
             SizedBox(height: size.height * 0.03),
             CustomButton(
                 onTap: () => _socketMethods.createRoom(_nameController.text),
